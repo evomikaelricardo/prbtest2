@@ -9,35 +9,45 @@ interface BottomNavProps {
 export default function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
   const [location] = useLocation();
   
-  const tabs = [
+  const leftTabs = [
     { id: "home", label: "Home", icon: Home, path: "/" },
     { id: "activity", label: "My Activity", icon: FileText, path: "/activity" },
+  ];
+  
+  const rightTabs = [
     { id: "billing", label: "Billing", icon: CreditCard, path: "/billing" },
     { id: "account", label: "Account", icon: User, path: "/account" },
   ];
 
+  const renderTab = (tab: typeof leftTabs[0]) => {
+    const Icon = tab.icon;
+    const isActive = location === tab.path;
+    
+    return (
+      <Link key={tab.id} href={tab.path}>
+        <button
+          data-testid={`button-nav-${tab.id}`}
+          onClick={() => onTabChange(tab.id)}
+          className={`flex flex-col items-center justify-center gap-1 px-4 py-2 hover-elevate active-elevate-2 transition-colors ${
+            isActive ? "text-primary" : "text-muted-foreground"
+          }`}
+        >
+          <Icon className="w-6 h-6" />
+          <span className="text-xs font-medium">{tab.label}</span>
+        </button>
+      </Link>
+    );
+  };
+
   return (
     <nav className="fixed bottom-0 left-0 right-0 bg-card border-t border-border z-50">
-      <div className="flex justify-around items-center h-16 max-w-lg mx-auto px-2">
-        {tabs.map((tab) => {
-          const Icon = tab.icon;
-          const isActive = location === tab.path;
-          
-          return (
-            <Link key={tab.id} href={tab.path}>
-              <button
-                data-testid={`button-nav-${tab.id}`}
-                onClick={() => onTabChange(tab.id)}
-                className={`flex flex-col items-center justify-center gap-1 px-4 py-2 hover-elevate active-elevate-2 transition-colors ${
-                  isActive ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                <Icon className="w-6 h-6" />
-                <span className="text-xs font-medium">{tab.label}</span>
-              </button>
-            </Link>
-          );
-        })}
+      <div className="flex justify-between items-center h-16 max-w-lg mx-auto px-2">
+        <div className="flex items-center">
+          {leftTabs.map(renderTab)}
+        </div>
+        <div className="flex items-center">
+          {rightTabs.map(renderTab)}
+        </div>
       </div>
     </nav>
   );
