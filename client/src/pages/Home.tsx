@@ -63,7 +63,7 @@ export default function Home() {
       
       <div className="px-4 -mt-16 relative z-10">
         <div className="bg-card rounded-xl shadow-sm p-6 mb-6">
-          <div className="grid grid-cols-3 gap-4 mb-4">
+          <div className="grid grid-cols-3 gap-3">
             <ServiceRequestDialog tenantId={tenantId}>
               <div className="w-full">
                 <ServiceCard
@@ -106,37 +106,28 @@ export default function Home() {
               iconBgColor="bg-pink-100 dark:bg-pink-900/30"
               iconColor="text-pink-600 dark:text-pink-400"
             />
-          </div>
-
-          <div className="grid grid-cols-3 gap-3">
-            <FacilityIcon
+            <ServiceCard
               icon={Wrench}
               label="Engineering"
               iconBgColor="bg-cyan-100 dark:bg-cyan-900/30"
               iconColor="text-cyan-600 dark:text-cyan-400"
             />
-            <FacilityIcon
+            <ServiceCard
               icon={Sparkles}
               label="Housekeeping"
               iconBgColor="bg-indigo-100 dark:bg-indigo-900/30"
               iconColor="text-indigo-600 dark:text-indigo-400"
             />
-            <FacilityIcon
+            <ServiceCard
               icon={Calendar}
               label="Facility Booking"
               iconBgColor="bg-teal-100 dark:bg-teal-900/30"
               iconColor="text-teal-600 dark:text-teal-400"
             />
-            <FacilityIcon
-              icon={CardIcon}
-              label="Access Card"
-              iconBgColor="bg-amber-100 dark:bg-amber-900/30"
-              iconColor="text-amber-600 dark:text-amber-400"
-            />
-            <FacilityIcon
+            <ServiceCard
               icon={TruckIcon}
               label="Loading Unloading"
-              iconBgColor="bg-rose-100 dark:bg-rose-100/30"
+              iconBgColor="bg-rose-100 dark:bg-rose-900/30"
               iconColor="text-rose-600 dark:text-rose-400"
             />
           </div>
