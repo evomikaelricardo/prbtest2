@@ -396,30 +396,3 @@ body > div[style*="position:fixed"][style*="bottom"] {
 [style*="position:fixed"][style*="right"][style*="bottom:20px"] {
   bottom: 100px !important;
 }
-
-/* Hide "Powered by Retell" branding with white overlay - positioned specifically at widget bottom */
-#retell-branding-cover {
-  content: "";
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  width: 360px;
-  height: 35px;
-  background: white;
-  z-index: 999999;
-  pointer-events: none;
-  display: block;
-}
-
-/* Create the cover div using after pseudo-element */
-body::after {
-  content: "";
-  position: fixed;
-  bottom: 100px;
-  right: 20px;
-  width: 360px;
-  height: 35px;
-  background: white;
-  z-index: 999999;
-  pointer-events: none;
-}
