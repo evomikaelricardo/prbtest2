@@ -385,9 +385,9 @@ body > div[style*="position:fixed"][style*="bottom"],
 [style*="position:fixed"][style*="right"][style*="bottom"] {
   position: fixed !important;
   bottom: 16px !important;
-  left: 50% !important;
+  left: 47% !important;
   right: auto !important;
-  transform: translateX(-50%) !important;
+  transform: translateX(-47%) !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   margin-bottom: 0 !important;
