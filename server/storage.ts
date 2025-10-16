@@ -62,8 +62,8 @@ export class MemStorage implements IStorage {
     const defaultTenant: Tenant = {
       id: "tenant-1",
       name: "Syahrul Hajji",
-      unitNumber: "Camelia 101",
-      buildingName: "Garden Ville Apartment",
+      unitNumber: "Amor.05.07",
+      buildingName: "Pakuwon Residence",
       phone: "+62 812-3456-7890" as string | null,
       email: "syahrul.hajji@example.com" as string | null,
     };
