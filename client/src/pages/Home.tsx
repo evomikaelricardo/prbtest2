@@ -108,7 +108,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex gap-3 overflow-x-auto pb-2 -mx-2 px-2 scrollbar-hide">
+          <div className="grid grid-cols-3 gap-3">
             <FacilityIcon
               icon={Wrench}
               label="Engineering"
@@ -136,7 +136,7 @@ export default function Home() {
             <FacilityIcon
               icon={TruckIcon}
               label="Loading Unloading"
-              iconBgColor="bg-rose-100 dark:bg-rose-900/30"
+              iconBgColor="bg-rose-100 dark:bg-rose-100/30"
               iconColor="text-rose-600 dark:text-rose-400"
             />
           </div>
