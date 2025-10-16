@@ -371,3 +371,28 @@
     inset: -1px;
   }
 }
+
+/* Retell Chat Widget Positioning - Move above bottom navigation */
+#retell-widget-button,
+[id*="retell"],
+iframe[src*="retell"],
+div[id*="retell-"],
+button[id*="retell"],
+div[class*="retell"] {
+  bottom: 100px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Additional targeting for widget container */
+body > div[style*="position: fixed"][style*="bottom"],
+body > div[style*="position:fixed"][style*="bottom"] {
+  bottom: 100px !important;
+}
+
+/* Specific override for right-aligned fixed elements near bottom */
+[style*="position: fixed"][style*="right"][style*="bottom: 20px"],
+[style*="position: fixed"][style*="right"][style*="bottom:20px"],
+[style*="position:fixed"][style*="right"][style*="bottom: 20px"],
+[style*="position:fixed"][style*="right"][style*="bottom:20px"] {
+  bottom: 100px !important;
+}
