@@ -254,7 +254,7 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-
+  
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
@@ -385,9 +385,9 @@ body > div[style*="position:fixed"][style*="bottom"],
 [style*="position:fixed"][style*="right"][style*="bottom"] {
   position: fixed !important;
   bottom: 16px !important;
-  left: 60% !important;
+  left: 50% !important;
   right: auto !important;
-  transform: translateX(-60%) !important;
+  transform: translateX(-50%) !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   margin-bottom: 0 !important;
