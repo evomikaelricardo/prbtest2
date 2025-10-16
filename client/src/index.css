@@ -396,3 +396,26 @@ body > div[style*="position:fixed"][style*="bottom"] {
 [style*="position:fixed"][style*="right"][style*="bottom:20px"] {
   bottom: 100px !important;
 }
+
+/* Hide "Powered by Retell" branding */
+[id*="retell"]::after,
+iframe[src*="retell"] + div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: white;
+  z-index: 9999;
+}
+
+/* Target the powered by text specifically */
+[class*="powered"],
+[id*="powered"],
+div[style*="powered"],
+a[href*="retell.ai"] {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+}
