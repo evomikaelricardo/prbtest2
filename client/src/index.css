@@ -378,30 +378,17 @@
 iframe[src*="retell"],
 div[id*="retell-"],
 button[id*="retell"],
-div[class*="retell"] {
-  bottom: 16px !important;
-  left: 50% !important;
-  right: auto !important;
-  transform: translateX(-50%) !important;
-  margin-bottom: 0 !important;
-}
-
-/* Additional targeting for widget container */
+div[class*="retell"],
 body > div[style*="position: fixed"][style*="bottom"],
-body > div[style*="position:fixed"][style*="bottom"] {
+body > div[style*="position:fixed"][style*="bottom"],
+[style*="position: fixed"][style*="right"][style*="bottom"],
+[style*="position:fixed"][style*="right"][style*="bottom"] {
+  position: fixed !important;
   bottom: 16px !important;
   left: 50% !important;
   right: auto !important;
   transform: translateX(-50%) !important;
-}
-
-/* Specific override for right-aligned fixed elements near bottom */
-[style*="position: fixed"][style*="right"][style*="bottom: 20px"],
-[style*="position: fixed"][style*="right"][style*="bottom:20px"],
-[style*="position:fixed"][style*="right"][style*="bottom: 20px"],
-[style*="position:fixed"][style*="right"][style*="bottom:20px"] {
-  bottom: 16px !important;
-  left: 50% !important;
-  right: auto !important;
-  transform: translateX(-50%) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 0 !important;
 }
