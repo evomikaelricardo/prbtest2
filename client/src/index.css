@@ -397,25 +397,29 @@ body > div[style*="position:fixed"][style*="bottom"] {
   bottom: 100px !important;
 }
 
-/* Hide "Powered by Retell" branding */
-[id*="retell"]::after,
-iframe[src*="retell"] + div::after {
+/* Hide "Powered by Retell" branding with white overlay - positioned specifically at widget bottom */
+#retell-branding-cover {
   content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 25px;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 360px;
+  height: 35px;
   background: white;
-  z-index: 9999;
+  z-index: 999999;
+  pointer-events: none;
+  display: block;
 }
 
-/* Target the powered by text specifically */
-[class*="powered"],
-[id*="powered"],
-div[style*="powered"],
-a[href*="retell.ai"] {
-  opacity: 0 !important;
-  visibility: hidden !important;
-  display: none !important;
+/* Create the cover div using after pseudo-element */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 360px;
+  height: 35px;
+  background: white;
+  z-index: 999999;
+  pointer-events: none;
 }
